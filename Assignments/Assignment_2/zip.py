@@ -23,7 +23,6 @@ def zipdir(path, ziph, exclude=[]):
     for root, _, files in os.walk(path):
         print(f"Adding files from {root} to {ziph.filename}...")
         for file in files:
-            # print(f"Adding {file}...")
             if file not in exclude:
                 ziph.write(os.path.join(root, file))
             else:
