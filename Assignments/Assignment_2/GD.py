@@ -106,7 +106,7 @@ class BatchGradientDescent:
         try:
             weights = self.weights
         except AttributeError:
-            raise AttributeError("Model has not been fit yet")
+            raise AttributeError("Model has not been fitted yet")
         y_hat = self.predict(X)
         y_mean = np.mean(y)
         ss_tot = np.sum((y - y_mean) ** 2)
@@ -139,7 +139,7 @@ class BatchGradientDescent:
 
         X = self._preprocess(X)
         self.weights = self._get_weights(n=X.shape[1])
-        loss = 1
+        loss = 1e-6
         for i in range(epochs):
             self._epoch_progress(i, epochs, verbose=verbose)
             self._loss_progress(X, y, i, verbose)
@@ -218,7 +218,7 @@ class MiniBatchGradientDescent(BatchGradientDescent):
         X = self._preprocess(X)
         self.__batch_size = batch_size
         self.weights = self._get_weights(n=X.shape[1])
-        loss = 1
+        loss = 1e-6
 
         for i in range(epochs):
             self._epoch_progress(i, epochs, verbose=verbose)
@@ -331,7 +331,7 @@ class SteepestDescent(BatchGradientDescent):
             The learning rate
         """
         raw_lr = self.secant(
-            self.phi, 0.1, 0.01, weights=weights, X=X, y=y, tol=1e-5, max_iter=1000
+            self.phi, 0.001, 0.999, weights=weights, X=X, y=y, tol=1e-5, max_iter=1000
         )
 
         if raw_lr < 1e-3:
@@ -364,7 +364,7 @@ class SteepestDescent(BatchGradientDescent):
 
         X = self._preprocess(X)
         self.weights = self._get_weights(n=X.shape[1])
-        loss = 1
+        loss = 1e-6
         for i in range(epochs):
             self._loss_progress(X, y, i, verbose)
             self._epoch_progress(i, epochs, verbose=verbose)
