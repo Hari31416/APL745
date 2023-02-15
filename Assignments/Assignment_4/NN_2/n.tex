@@ -1,0 +1,176 @@
+\hypertarget{notations}{%
+\section{Notations}\label{notations}}
+
+This document contains the notations used throughout the project.
+
+\hypertarget{general-notations}{%
+\subsection{General Notations}\label{general-notations}}
+
+\begin{itemize}
+\tightlist
+\item
+  A lowercase letter represents a scalar. eg. \(a\)
+\item
+  A lowercase bold letter represents a vector. eg. \(\mathbf{a}\)
+\item
+  An uppercase letter represents a matrix. eg. \(A\)
+\end{itemize}
+
+\hypertarget{numpy-implementation-specific-notations}{%
+\subsection{Numpy Implementation Specific
+Notations}\label{numpy-implementation-specific-notations}}
+
+\begin{quote}
+Numpy use row first notation, this means that the first index of a
+matrix is the row index and the second index is the column index. For
+example, \(A_{i,j}\) is the element at row \(i\) and column \(j\) of
+matrix \(A\).
+
+This also means that a row vector is a matrix with shape \((1, n)\) and
+a column vector is a matrix with shape \((n, 1)\). See the notebook
+\url{Preliminaries.ipynb} for more details.
+\end{quote}
+
+\begin{itemize}
+\tightlist
+\item
+  A vector \(\mathbf{a}\) has a shape of \((n,)\) or \((n, 1)\)
+  depending on situtaion (I'll prefer the first one if not needed
+  otherwise.). I'm not going to use \((1,n)\) as the shape of a vector.
+\item
+  A matrix \(A\) has a shape of \((m, n)\), where \(m\) is the number of
+  rows and \(n\) is the number of columns.
+\item
+  In numpy, counting starts from 0 however, in the following notations,
+  I'll use 1-based indexing.
+\end{itemize}
+
+\hypertarget{indexing}{%
+\subsection{Indexing}\label{indexing}}
+
+\begin{itemize}
+\tightlist
+\item
+  I'll use \(a_i\) to represent the \(i\)th element of vector
+  \(\mathbf{a}\). For example, \(a_1\) is the first element of vector
+  \(\mathbf{a}\).
+\item
+  I'll use \(a_{i,j}\) to represent the element at row \(i\) and column
+  \(j\) of matrix \(A\). For example, \(a_{1,2}\) is the element at row
+  1 and column 2 of matrix \(A\).
+\item
+  \(\mathbf{a^{[i]}}\) is the \(i\)th column of matrix \(A\).
+\item
+  \(\mathbf{a_j}\) is the \(j\)th row of matrix \(A\).
+\end{itemize}
+
+\hypertarget{neural-network-specific-notations}{%
+\subsection{Neural Network Specific
+Notations}\label{neural-network-specific-notations}}
+
+\begin{quote}
+The notation is borrowed from the course
+\href{https://www.coursera.org/learn/neural-networks-deep-learning}{Neural
+Networks and Deep Learning} by Andrew Ng with some modifications.
+\end{quote}
+
+\hypertarget{general}{%
+\subsubsection{General}\label{general}}
+
+Super script \([l]\) represents the \(l\)th layer while superscript
+\((i)\) represents the \(i\)th training example.
+
+\hypertarget{sizes}{%
+\subsubsection{Sizes}\label{sizes}}
+
+\begin{itemize}
+\tightlist
+\item
+  \(m\) is the number of training examples.
+\item
+  \(n_x\) is the number of features. (input size)
+\item
+  \(n_y\) is the number of classes. (output size)
+\item
+  \(n^{[l]}\) is the number of neurons in layer \(l\).
+\item
+  \(L\) is the number of layers in the network. (Excluding input layer)
+\end{itemize}
+
+\hypertarget{objects}{%
+\subsubsection{Objects}\label{objects}}
+
+\begin{itemize}
+\tightlist
+\item
+  \(X\in \mathbb{R}^{n_x\times m}\) is the input matrix, where each
+  column is a training example. So, \(X\) is a matrix with shape
+  \((n_x, m)\).
+\item
+  \(x^{(i)}\in \mathbb{R}^{n_x}\) is the \(i^{\text{th}}\) training
+  example. So, \(x^{(i)}\) is a column vector with shape \((n_x, 1)\).
+\item
+  \(Y \in \mathbb{R}^{n_y\times m}\) is the output matrix, where each
+  column is a training example. So, \(Y\) is a matrix with shape
+  \((n_y, m)\).
+\item
+  \(\mathbf{y^{(i)}} \in \mathbb{R}^{n_y}\) is the output label for
+  \(i^{\text{th}}\) example.
+\item
+  \(W^{[l]}\in \mathbb{R}^{n^{[l]}\times n^{[l-1]}}\) is the weight
+  matrix of layer \(l\). This means that \(W^{[l]}\) is a matrix with
+  shape \((n^{[l]}, n^{[l-1]})\).
+\item
+  \(b^{[l]}\in \mathbb{R}^{n^{[l]}}\) is the bias vector of layer \(l\).
+  This means that \(b^{[l]}\) is a column vector with shape
+  \((n^{[l]}, )\).
+\item
+  \(\hat{y} \in \mathbb{R}^{m}\) is the predicted output label. This is
+  an exception where I'll use lowercase, normal font for a vector.
+\item
+  \(\hat{Y} \in \mathbb{R}^{n_y\times m}\) is the predicted output
+  matrix. This is the one hot encoded version of \(\hat{y}\).
+\end{itemize}
+
+\hypertarget{forward-propagation-and-activation-functions}{%
+\subsubsection{Forward Propagation and Activation
+Functions}\label{forward-propagation-and-activation-functions}}
+
+\begin{itemize}
+\tightlist
+\item
+  \(Z^{[l]}\in \mathbb{R}^{n^{[l]}\times m}\) is the linear output of
+  layer \(l\). This means that \(Z^{[l]}\) is a matrix with shape
+  \((n^{[l]}, m)\).
+\item
+  \(A^{[l]}\in \mathbb{R}^{n^{[l]}\times m}\) is the activation output
+  of layer \(l\). Its shape is the same as \(Z^{[l]}\).
+\item
+  \(g^{[l]}\) is the activation function of layer \(l\).
+\item
+  \(\mathbf{a^{[l]{(i)}}} \in \mathbb{R}^{n^{[l]}}\) is the
+  \(i^{\text{th}}\) training example's output of layer \(l\). This means
+  that \(\mathbf{a^{[l]{(i)}}}\) is a column vector with shape
+  \((n^{[l]}, 1)\).
+\item
+  \(\mathbf{a^{[l]}_{i}}\) is the output of the \(i^{\text{th}}\) neuron
+  of layer \(l\).
+\end{itemize}
+
+\hypertarget{backward-propagation}{%
+\subsubsection{Backward Propagation}\label{backward-propagation}}
+
+\begin{itemize}
+\tightlist
+\item
+  \(\mathcal{J}(X, W, \mathbf{b}, \mathbf{y})\in R^1\) or
+  \(\mathcal{J}(\hat{y}, \mathbf{y}) \in R^1\) is the cost function.
+  This is another exception where I've use uppercase letter to denote a
+  scalar.
+\item
+  \(d{W^{[l]}}\) is the partial derivative of \(\mathcal{J}\) with
+  respect to \(W\), \(\frac{\partial{\mathcal{J}}}{\partial W^{[1]}}\).
+\item
+  \(d{b^{[l]}}\) is the partial derivative of \(\mathcal{J}\) with
+  respect to \(b\), \(\frac{\partial{\mathcal{J}}}{\partial b}\).
+\end{itemize}
