@@ -59,7 +59,7 @@ def main(dir, zipname, exclude=[]):
 
 
 if __name__ == "__main__":
-    zipname = "2021PHS7181.zip"
+    zipname = "2021PHS7190.zip"
     excludes = [
         ".ipynb_checkpoints",
         "zip.py",
@@ -67,9 +67,6 @@ if __name__ == "__main__":
         "__pycache__",
         "image_to_md.py",
         "plots.md",
-        "autodiff_pytorch.ipynb",
         "text.txt",
-        "solving_pde.ipynb",
-        "solving_pde.pdf",
     ]
     main(os.curdir, zipname, excludes)
