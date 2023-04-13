@@ -1,6 +1,0 @@
-### This is the displacement with x plot. The analytic solution and the solution learned by the model are plotted on top of each other.
-### This is the total loss plot. The loss is decreasing and becomes almost zero after 10 epochs.
-
-### This is the $EA$ with x plot. Same as before, the analytic solution and the solution learned by the model are plotted on top of each other.
-
-### This is the total loss plot. The loss is decreasing and becomes almost zero after 10 epochs.

@@ -1,9 +1,0 @@
-### The figure shows the learned x-displacement.
-
-### This shows the learned y-displacement.
-
-### This shows the boundary, pde and total loss as epochs increase.
-
-### This is the y-displacement as predicted by the network on the custom collocation points.
-
-### This is the x-displacement as predicted by the network on the custom collocation points.
