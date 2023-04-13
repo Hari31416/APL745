@@ -1,0 +1,3 @@
+### This image shows the progress of loss with epochs. We can see that the the loss first decreases steeply and then it decreases very slowly.
+
+###This is a plot of four `anti-derivative` operator learned by the model and the actual solution.
