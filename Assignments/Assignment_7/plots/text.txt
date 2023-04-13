@@ -13,3 +13,7 @@
 - The third one is the total loss. This is the sum of the boundary and interior loss.
 
 We can see that all the losses are decreasing with the number of iterations. This shows that the model is learning the displacement.
+
+### This is the learned $u(x,y)$ plotted on the generated mesh. The plot matches very well with the plot given in the problem ppt, though the plot is not as smooth as the one given in the ppt because of less number of collocation points.
+
+### This is the learned $v(x,y)$ plotted on the generated mesh. The plot matches very well with the plot given in the problem ppt.

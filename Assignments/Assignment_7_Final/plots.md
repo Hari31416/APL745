@@ -11,17 +11,33 @@ output:
 
 ## Problem 1
 
-![/media/hari31416/Hari_SSD/Users/harik/Desktop/APL745/Assignments/Assignment_7_Final/images/0101.png](/media/hari31416/Hari_SSD/Users/harik/Desktop/APL745/Assignments/Assignment_7_Final/images/0101.png)
+## Problem 2
+
+![/media/hari31416/Hari_SSD/Users/harik/Desktop/APL745/Assignments/Assignment_7_Final/images/0201.png](/media/hari31416/Hari_SSD/Users/harik/Desktop/APL745/Assignments/Assignment_7_Final/images/0201.png)
 The figure shows the learned x-displacement.
 
 ---
 
-![/media/hari31416/Hari_SSD/Users/harik/Desktop/APL745/Assignments/Assignment_7_Final/images/0102.png](/media/hari31416/Hari_SSD/Users/harik/Desktop/APL745/Assignments/Assignment_7_Final/images/0102.png)
+![/media/hari31416/Hari_SSD/Users/harik/Desktop/APL745/Assignments/Assignment_7_Final/images/0202.png](/media/hari31416/Hari_SSD/Users/harik/Desktop/APL745/Assignments/Assignment_7_Final/images/0202.png)
 This shows the learned y-displacement.
 
 ---
 
-![/media/hari31416/Hari_SSD/Users/harik/Desktop/APL745/Assignments/Assignment_7_Final/images/0103.png](/media/hari31416/Hari_SSD/Users/harik/Desktop/APL745/Assignments/Assignment_7_Final/images/0103.png)
+## Problem 3
+
+![/media/hari31416/Hari_SSD/Users/harik/Desktop/APL745/Assignments/Assignment_7_Final/images/0301.png](/media/hari31416/Hari_SSD/Users/harik/Desktop/APL745/Assignments/Assignment_7_Final/images/0301.png)
 This shows the boundary, pde and total loss as epochs increase.
+
+---
+
+## Problem 5
+
+![/media/hari31416/Hari_SSD/Users/harik/Desktop/APL745/Assignments/Assignment_7_Final/images/0501.png](/media/hari31416/Hari_SSD/Users/harik/Desktop/APL745/Assignments/Assignment_7_Final/images/0501.png)
+This is the y-displacement as predicted by the network on the custom collocation points.
+
+---
+
+![/media/hari31416/Hari_SSD/Users/harik/Desktop/APL745/Assignments/Assignment_7_Final/images/0502.png](/media/hari31416/Hari_SSD/Users/harik/Desktop/APL745/Assignments/Assignment_7_Final/images/0502.png)
+This is the x-displacement as predicted by the network on the custom collocation points.
 
 ---
